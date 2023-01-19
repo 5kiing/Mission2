@@ -21,10 +21,20 @@ namespace Mission2
 
             // prompt user
             Console.WriteLine("Welcome to the dice throwing simulator!");
-            Console.WriteLine("How many dice rolls would you like to simulate?");
+            Console.WriteLine();
+            Console.Write("How many dice rolls would you like to simulate? ");
+            timesThrown = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
 
             // receive user input
-            timesThrown = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
+            Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.");
+            Console.Write("Total number of rolls = " + timesThrown + ".\n");
+
+            Console.WriteLine();
+
             
             // simulate roll of the die
             for (int i = 0; i < timesThrown; i++)
@@ -48,6 +58,8 @@ namespace Mission2
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine();
+            Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
         }
     }
 }
